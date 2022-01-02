@@ -5,6 +5,9 @@
     margin: 0;
     font-family: "Poppins", sans-serif;
     font-weight: $fw-s;
+}
+
+body {
     background-color: $color-main;
 }
 
@@ -25,9 +28,194 @@ header {
 
 /* Home */
 .home-container {
-    width: 80%;
-    height: 80%;
-    background-color: $color-second;
-    border-radius: $p-r;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .home-desc-main {
+        width: 75%;
+        padding: $p-b 0 0 0;
+
+        h1 {
+            color: $color-fourth;
+            text-align: center;
+            font-size: $fs-m;
+            padding: 0 0 $p-s;
+        }
+
+        h3 {
+            color: $color-third;
+        }
+    }
+
+    .home-content {
+        width: 75%;
+        height: 100%;
+        background-color: $color-second;
+        border-radius: $p-r;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: $p-b 0;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: $p-b 0;
+            width: 60%;
+
+            ul {
+                list-style: none;
+                width: 100%;
+
+                li::before {
+                    content: "\2022";
+                    color: $color-fourth;
+                    font-weight: $fw-b;
+                    font-size: $fs-b;
+                    display: inline-block;
+                    width: 1em;
+                    margin: 0 0 0 -1em;
+                }
+
+                li {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    label {
+                        color: grey;
+                        background-color: $color-seventh;
+                        font-size: $fs-s;
+                        border-radius: $p-xs;
+                        padding: 0 0 0 $p-s;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+
+                        input[type="date"] {
+                            background-color: $color-sixth;
+                            color: $color-third;
+                            border: none;
+                            border-radius: $p-xs;
+                            padding: $p-xs 0;
+                            margin: 0 0 0 $p-b;
+                            font-size: $fs-s;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            input[type="text"] {
+                background-color: $color-seventh;
+                font-size: $fs-s;
+                border: none;
+                border-radius: $p-xs;
+                padding: $p-xs $p-s;
+                color: $color-third;
+                width: 100%;
+            }
+
+            textarea {
+                width: 100%;
+                background-color: $color-seventh;
+                border-radius: $p-xs;
+                border: none;
+                font-size: $fs-s;
+                color: $color-third;
+                padding: $p-m;
+            }
+
+            .label-checkbox {
+                color: $color-third;
+                font-size: $fs-s;
+                display: flex;
+                align-items: center;
+                margin: $p-m 0 0 0;
+
+                span {
+                    font-weight: $fw-b;
+                    font-size: $fs-r;
+                    color: $color-fourth;
+                    padding: 0 $p-s 0 0;
+                    cursor: pointer;
+                }
+            }
+
+            .label-checkbox input[type="checkbox"] {
+                display: none;
+            }
+            .label-checkbox input[type="checkbox"] + span::before {
+                content: "\2610";
+            }
+
+            .label-checkbox input[type="checkbox"]:checked + span::before {
+                content: "\2611";
+            }
+
+            .label-hidden {
+                display: none;
+                flex-direction: column;
+                width: 50%;
+                max-width: 50%;
+
+                label {
+                    padding: $p-r 0 0 0;
+                    color: $color-third;
+                }
+
+                input {
+                    border: none;
+                    border-radius: $p-xs;
+                    background-color: $color-seventh;
+                    padding: $p-xs 0;
+                    font-size: $fs-s;
+                    color: $color-third;
+                    width: 100%;
+                }
+
+                span {
+                    color: $color-third;
+                    background-color: $color-sixth;
+                    border-radius: $p-xs;
+                    padding: $p-xs $p-s;
+                    margin: 0 0 0 $p-m;
+                }
+            }
+
+            .label-hidden-alt {
+                label {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            input[type="submit"] {
+                border: none;
+                border-radius: $p-xs;
+                background-color: $color-sixth;
+                color: $color-third;
+                padding: $p-xs $p-b;
+                font-size: $fs-r;
+                justify-self: center;
+                margin: $p-m 0 0 0;
+                width: 50%;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover {
+                background-color: $color-sixth-dark;
+            }
+        }
+    }
 }
 /* End Home */
