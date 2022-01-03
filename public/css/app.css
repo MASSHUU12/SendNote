@@ -6,6 +6,24 @@
   font-weight: 300;
 }
 
+/* Custom Elements */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #3e3a50;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262636;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1b1b27;
+}
+
+/* End Custom Elements */
 body {
   background-color: #20202e;
 }
@@ -24,6 +42,44 @@ header span {
 }
 
 /* End Header */
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3e3a50;
+  margin: 25px 0 0 0;
+}
+footer .footer-left,
+footer .footer-right {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 15px 0;
+}
+footer .footer-left a,
+footer .footer-right a {
+  font-weight: 500;
+}
+footer .footer-left a,
+footer .footer-left p,
+footer .footer-right a,
+footer .footer-right p {
+  color: #d3d2d8;
+  text-decoration: none;
+  font-size: 24px;
+}
+footer .footer-left a a,
+footer .footer-left p a,
+footer .footer-right a a,
+footer .footer-right p a {
+  color: #ebbb61;
+}
+footer .footer-right {
+  width: 50%;
+}
+
+/* End Footer */
 /* Home */
 .home-container {
   width: 100%;
@@ -192,4 +248,47 @@ header span {
   background-color: #4241aa;
 }
 
-/* End Home *//*# sourceMappingURL=app.css.map */
+/* End Home */
+/* Error */
+.error-container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error-container .error-content {
+  height: 80%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.error-container .error-content h1 {
+  font-size: 72px;
+  color: #ebbb61;
+}
+.error-container .error-content h1 span {
+  font-weight: 700;
+}
+.error-container .error-content p {
+  font-size: 24px;
+  color: #d3d2d8;
+}
+.error-container .error-content a {
+  border-radius: 5px;
+  background-color: #706fc8;
+  color: #d3d2d8;
+  padding: 10px 50px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 50px 0 0 0;
+}
+.error-container .error-content a:hover {
+  background-color: #4241aa;
+}
+
+/* End Error *//*# sourceMappingURL=app.css.map */

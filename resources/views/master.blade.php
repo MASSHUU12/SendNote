@@ -20,6 +20,19 @@
 
         <main>@yield('content')</main>
 
+        <footer>
+            <div class="footer-left">
+                <a href="/">Home</a>
+                <a href="/privacy">Privacy Policy</a>
+            </div>
+            <div class="footer-right">
+                <p>
+                    This if free onlince service - made with &#9825; you can
+                    support website <a href="">here</a>.
+                </p>
+            </div>
+        </footer>
+
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
             integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
