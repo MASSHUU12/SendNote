@@ -40,11 +40,12 @@ header {
     justify-content: flex-start;
     align-items: center;
 
-    span {
+    a {
         color: $color-fourth;
+        text-decoration: none;
         font-weight: $fw-m;
         font-size: $fs-m;
-        padding: $p-m 0 0 $p-m;
+        padding: $p-m 0 0 $p-xb;
     }
 }
 /* End Header */
@@ -64,8 +65,10 @@ footer {
         width: 30%;
         padding: $p-r 0;
 
-        a {
-            font-weight: $fw-m;
+        h1 {
+            color: $color-third;
+            font-weight: $fw-b;
+            padding: $p-r 0 0 0;
         }
 
         a,
@@ -194,9 +197,12 @@ footer {
                 padding: $p-m;
             }
 
+            textarea:focus {
+                outline: 3px solid $color-main;
+            }
+
             .label-checkbox {
                 color: $color-third;
-                font-size: $fs-s;
                 display: flex;
                 align-items: center;
                 margin: $p-m 0 0 0;
@@ -280,6 +286,26 @@ footer {
 }
 /* End Home */
 
+/* Privacy Policy */
+.priv-container {
+    padding: 0 $p-xb;
+    margin: $p-b 0 0 0;
+
+    h1 {
+        color: $color-fourth;
+        font-size: $fs-b;
+        padding: 0 0 $p-r;
+    }
+
+    p {
+        color: $color-third;
+        font-size: $fs-s;
+        font-weight: $fw-xs;
+        padding: $p-r 0 0 0;
+    }
+}
+/* End Privacy Policy */
+
 /* Error */
 .error-container {
     width: 100%;
@@ -328,3 +354,136 @@ footer {
     }
 }
 /* End Error */
+
+/* Mobile */
+@media (max-width: 854px) {
+    header {
+        a {
+            font-size: $fs-r;
+            padding: $p-s 0 0 $p-m;
+        }
+    }
+
+    footer {
+        margin: $p-m 0 0 0;
+        padding: 0 $p-m;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .footer-left,
+        .footer-right {
+            width: fit-content;
+            padding: $p-s 0;
+
+            a {
+                font-size: $fs-r;
+            }
+
+            p {
+                font-size: $fs-s;
+
+                a {
+                    font-size: $fs-s;
+                }
+            }
+        }
+    }
+
+    .home-container {
+        .home-desc-main {
+            width: 100%;
+            padding: $p-b 0 0 0;
+
+            h1 {
+                padding: 0 $p-m;
+            }
+
+            h3 {
+                font-size: $fs-s;
+                padding: $p-r $p-m;
+            }
+        }
+
+        .home-content {
+            width: 100%;
+
+            form {
+                width: 75%;
+                align-items: center;
+                padding: $p-s 0 $p-m;
+
+                ul {
+                    li {
+                        label {
+                            font-size: $fs-xs;
+
+                            input[type="date"] {
+                                font-size: $fs-xs;
+                                padding: $p-s 0 $p-s $p-s;
+                                margin: 0 0 0 $p-s;
+                            }
+                        }
+                    }
+                }
+
+                input[type="text"] {
+                    font-size: $fs-xs;
+                    padding: $p-s;
+                }
+
+                textarea {
+                    font-size: $fs-xs;
+                    margin: $p-m 0 0 0;
+                }
+
+                .label-checkbox {
+                    width: 100%;
+
+                    span {
+                        font-size: $fs-s;
+                    }
+                }
+
+                .label-hidden {
+                    width: 100%;
+                    max-width: 100%;
+
+                    input {
+                        padding: $p-s;
+                        font-size: $fs-xs;
+                    }
+                }
+
+                input[type="submit"] {
+                    font-size: $fs-s;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .priv-container {
+        padding: 0 $p-m;
+    }
+
+    .error-container {
+        .error-content {
+            width: 100%;
+            padding: 0 $p-r;
+
+            h1 {
+                font-size: $fs-m;
+            }
+
+            p {
+                font-size: $fs-s;
+                padding: $p-r 0 0 0;
+            }
+
+            a {
+                padding: $p-s $p-m;
+            }
+        }
+    }
+}
+/* End Mobile */

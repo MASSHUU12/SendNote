@@ -18,12 +18,13 @@
                         type="text"
                         name="title"
                         placeholder="Note title..."
+                        required
                     />
                 </li>
                 <li>
                     <label>
                         Expiration date
-                        <input type="date" name="expiration_date" />
+                        <input type="date" name="expiration_date" required />
                     </label>
                 </li>
             </ul>
@@ -33,6 +34,8 @@
                 cols="30"
                 rows="10"
                 placeholder="Write a note..."
+                maxlength="1024"
+                required
             ></textarea>
 
             {{-- item --}}

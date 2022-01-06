@@ -15,7 +15,7 @@
     </head>
     <body>
         <header>
-            <span>SendNote</span>
+            <a href="/">SendNote</a>
         </header>
 
         <main>@yield('content')</main>
@@ -24,10 +24,12 @@
             <div class="footer-left">
                 <a href="/">Home</a>
                 <a href="/privacy">Privacy Policy</a>
+                <h1>Other services</h1>
+                <a href="#">Cut.It - URL Shortener</a>
             </div>
             <div class="footer-right">
                 <p>
-                    This if free onlince service - made with &#9825; you can
+                    This if free online service - made with &#9825; you can
                     support website <a href="">here</a>.
                 </p>
             </div>

@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+// Privacy Policy
+Route::get('/privacy', function () {
+    return view('privacy');
+});

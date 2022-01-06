@@ -34,11 +34,12 @@ header {
   justify-content: flex-start;
   align-items: center;
 }
-header span {
+header a {
   color: #ebbb61;
+  text-decoration: none;
   font-weight: 500;
   font-size: 36px;
-  padding: 20px 0 0 20px;
+  padding: 20px 0 0 75px;
 }
 
 /* End Header */
@@ -57,9 +58,11 @@ footer .footer-right {
   width: 30%;
   padding: 15px 0;
 }
-footer .footer-left a,
-footer .footer-right a {
-  font-weight: 500;
+footer .footer-left h1,
+footer .footer-right h1 {
+  color: #d3d2d8;
+  font-weight: 700;
+  padding: 15px 0 0 0;
 }
 footer .footer-left a,
 footer .footer-left p,
@@ -178,9 +181,11 @@ footer .footer-right {
   color: #d3d2d8;
   padding: 20px;
 }
+.home-container .home-content form textarea:focus {
+  outline: 3px solid #20202e;
+}
 .home-container .home-content form .label-checkbox {
   color: #d3d2d8;
-  font-size: 18px;
   display: flex;
   align-items: center;
   margin: 20px 0 0 0;
@@ -249,6 +254,24 @@ footer .footer-right {
 }
 
 /* End Home */
+/* Privacy Policy */
+.priv-container {
+  padding: 0 75px;
+  margin: 50px 0 0 0;
+}
+.priv-container h1 {
+  color: #ebbb61;
+  font-size: 48px;
+  padding: 0 0 15px;
+}
+.priv-container p {
+  color: #d3d2d8;
+  font-size: 18px;
+  font-weight: 200;
+  padding: 15px 0 0 0;
+}
+
+/* End Privacy Policy */
 /* Error */
 .error-container {
   width: 100%;
@@ -291,4 +314,111 @@ footer .footer-right {
   background-color: #4241aa;
 }
 
-/* End Error *//*# sourceMappingURL=app.css.map */
+/* End Error */
+/* Mobile */
+@media (max-width: 854px) {
+  header a {
+    font-size: 24px;
+    padding: 10px 0 0 20px;
+  }
+
+  footer {
+    margin: 20px 0 0 0;
+    padding: 0 20px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  footer .footer-left,
+footer .footer-right {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 10px 0;
+  }
+  footer .footer-left a,
+footer .footer-right a {
+    font-size: 24px;
+  }
+  footer .footer-left p,
+footer .footer-right p {
+    font-size: 18px;
+  }
+  footer .footer-left p a,
+footer .footer-right p a {
+    font-size: 18px;
+  }
+
+  .home-container .home-desc-main {
+    width: 100%;
+    padding: 50px 0 0 0;
+  }
+  .home-container .home-desc-main h1 {
+    padding: 0 20px;
+  }
+  .home-container .home-desc-main h3 {
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+  .home-container .home-content {
+    width: 100%;
+  }
+  .home-container .home-content form {
+    width: 75%;
+    align-items: center;
+    padding: 10px 0 20px;
+  }
+  .home-container .home-content form ul li label {
+    font-size: 12px;
+  }
+  .home-container .home-content form ul li label input[type=date] {
+    font-size: 12px;
+    padding: 10px 0 10px 10px;
+    margin: 0 0 0 10px;
+  }
+  .home-container .home-content form input[type=text] {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .home-container .home-content form textarea {
+    font-size: 12px;
+    margin: 20px 0 0 0;
+  }
+  .home-container .home-content form .label-checkbox {
+    width: 100%;
+  }
+  .home-container .home-content form .label-checkbox span {
+    font-size: 18px;
+  }
+  .home-container .home-content form .label-hidden {
+    width: 100%;
+    max-width: 100%;
+  }
+  .home-container .home-content form .label-hidden input {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .home-container .home-content form input[type=submit] {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .priv-container {
+    padding: 0 20px;
+  }
+
+  .error-container .error-content {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .error-container .error-content h1 {
+    font-size: 36px;
+  }
+  .error-container .error-content p {
+    font-size: 18px;
+    padding: 15px 0 0 0;
+  }
+  .error-container .error-content a {
+    padding: 10px 20px;
+  }
+}
+/* End Mobile *//*# sourceMappingURL=app.css.map */
