@@ -105,6 +105,24 @@ footer .footer-right {
 .home-container .home-desc-main h3 {
   color: #d3d2d8;
 }
+.home-container .home-error-container {
+  width: 75%;
+  background-color: #3e3a50;
+  border-radius: 15px;
+  margin: 50px 0 0 0;
+}
+.home-container .home-error-container div {
+  padding: 20px;
+}
+.home-container .home-error-container div h4:first-child {
+  color: #ebbb61;
+  font-size: 24px;
+  padding: 0 0 10px;
+}
+.home-container .home-error-container div h4 {
+  color: #d3d2d8;
+  font-size: 18px;
+}
 .home-container .home-content {
   width: 75%;
   height: 100%;
@@ -220,7 +238,7 @@ footer .footer-right {
   border: none;
   border-radius: 5px;
   background-color: #262636;
-  padding: 5px 0;
+  padding: 5px 10px;
   font-size: 18px;
   color: #d3d2d8;
   width: 100%;

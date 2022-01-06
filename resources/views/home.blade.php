@@ -9,6 +9,15 @@
             or after a set number of views.
         </h3>
     </div>
+    @if($errors->any())
+    <div class="home-error-container">
+        <div>
+            @foreach($errors->all() as $err)
+            <h4>{{ $err }}</h4>
+            @endforeach
+        </div>
+    </div>
+    @endif
     <div class="home-content">
         <form action="/create" method="post">
             @csrf
@@ -18,13 +27,17 @@
                         type="text"
                         name="title"
                         placeholder="Note title..."
-                        required
+                        value="{{ old('title') }}"
                     />
                 </li>
                 <li>
                     <label>
                         Expiration date
-                        <input type="date" name="expiration_date" required />
+                        <input
+                            type="date"
+                            name="expiration_date"
+                            value="{{ old('expiration_date') }}"
+                        />
                     </label>
                 </li>
             </ul>
@@ -35,8 +48,8 @@
                 rows="10"
                 placeholder="Write a note..."
                 maxlength="1024"
-                required
-            ></textarea>
+                >{{ old("note_content") }}</textarea
+            >
 
             {{-- item --}}
             <div class="label-checkbox">
@@ -72,11 +85,15 @@
                     >Email address to notify when the message is
                     destroyed</label
                 >
-                <input type="email" name="email" />
+                <input type="email" name="email" value="{{ old('email') }}" />
                 <label for="email_ref"
                     >Reference name for the message (optional)</label
                 >
-                <input type="text" name="email_ref" />
+                <input
+                    type="text"
+                    name="email_ref"
+                    value="{{ old('email_ref') }}"
+                />
             </div>
 
             {{-- item --}}
@@ -88,9 +105,11 @@
             </div>
             <div class="label-hidden label-hidden-alt" id="label-views">
                 <label
-                    ><input type="number" name="views" /><span
-                        >view/s</span
-                    ></label
+                    ><input
+                        type="number"
+                        name="views"
+                        value="{{ old('views') }}"
+                    /><span>view/s</span></label
                 >
             </div>
 

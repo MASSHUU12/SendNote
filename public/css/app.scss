@@ -114,6 +114,28 @@ footer {
         }
     }
 
+    .home-error-container {
+        width: 75%;
+        background-color: $color-second;
+        border-radius: $p-r;
+        margin: $p-b 0 0 0;
+
+        div {
+            padding: $p-m;
+
+            h4:first-child {
+                color: $color-fourth;
+                font-size: $fs-r;
+                padding: 0 0 $p-s;
+            }
+
+            h4 {
+                color: $color-third;
+                font-size: $fs-s;
+            }
+        }
+    }
+
     .home-content {
         width: 75%;
         height: 100%;
@@ -242,7 +264,7 @@ footer {
                     border: none;
                     border-radius: $p-xs;
                     background-color: $color-seventh;
-                    padding: $p-xs 0;
+                    padding: $p-xs $p-s;
                     font-size: $fs-s;
                     color: $color-third;
                     width: 100%;

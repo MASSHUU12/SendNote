@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,14 @@ use Illuminate\Support\Facades\Route;
 // Home
 Route::get('/', function () {
     return view('home');
+});
+
+// Handling form input
+Route::post('/create', [FormController::class, 'handleForm'])->middleware('verify.form');
+
+// Displaying result
+Route::get('/result', function () {
+    return view('result');
 });
 
 // Privacy Policy
