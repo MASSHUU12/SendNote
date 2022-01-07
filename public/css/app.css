@@ -84,7 +84,9 @@ footer .footer-right {
 
 /* End Footer */
 /* Home */
-.home-container {
+.home-container,
+.result-container,
+.note-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -92,38 +94,57 @@ footer .footer-right {
   justify-content: center;
   align-items: center;
 }
-.home-container .home-desc-main {
+.home-container .home-desc-main,
+.result-container .home-desc-main,
+.note-container .home-desc-main {
   width: 75%;
   padding: 50px 0 0 0;
 }
-.home-container .home-desc-main h1 {
+.home-container .home-desc-main h1,
+.result-container .home-desc-main h1,
+.note-container .home-desc-main h1 {
   color: #ebbb61;
   text-align: center;
   font-size: 36px;
   padding: 0 0 10px;
 }
-.home-container .home-desc-main h3 {
+.home-container .home-desc-main h3,
+.result-container .home-desc-main h3,
+.note-container .home-desc-main h3 {
   color: #d3d2d8;
 }
-.home-container .home-error-container {
+.home-container .home-error-container,
+.result-container .home-error-container,
+.note-container .home-error-container {
   width: 75%;
   background-color: #3e3a50;
   border-radius: 15px;
   margin: 50px 0 0 0;
 }
-.home-container .home-error-container div {
+.home-container .home-error-container div,
+.result-container .home-error-container div,
+.note-container .home-error-container div {
   padding: 20px;
 }
-.home-container .home-error-container div h4:first-child {
+.home-container .home-error-container div h4:first-child,
+.result-container .home-error-container div h4:first-child,
+.note-container .home-error-container div h4:first-child {
   color: #ebbb61;
   font-size: 24px;
   padding: 0 0 10px;
 }
-.home-container .home-error-container div h4 {
+.home-container .home-error-container div h4,
+.result-container .home-error-container div h4,
+.note-container .home-error-container div h4 {
   color: #d3d2d8;
   font-size: 18px;
 }
-.home-container .home-content {
+.home-container .home-content,
+.home-container .result-content,
+.result-container .home-content,
+.result-container .result-content,
+.note-container .home-content,
+.note-container .result-content {
   width: 75%;
   height: 100%;
   background-color: #3e3a50;
@@ -134,7 +155,12 @@ footer .footer-right {
   align-items: center;
   margin: 50px 0;
 }
-.home-container .home-content form {
+.home-container .home-content form,
+.home-container .result-content form,
+.result-container .home-content form,
+.result-container .result-content form,
+.note-container .home-content form,
+.note-container .result-content form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,11 +168,21 @@ footer .footer-right {
   padding: 50px 0;
   width: 60%;
 }
-.home-container .home-content form ul {
+.home-container .home-content form ul,
+.home-container .result-content form ul,
+.result-container .home-content form ul,
+.result-container .result-content form ul,
+.note-container .home-content form ul,
+.note-container .result-content form ul {
   list-style: none;
   width: 100%;
 }
-.home-container .home-content form ul li::before {
+.home-container .home-content form ul li::before,
+.home-container .result-content form ul li::before,
+.result-container .home-content form ul li::before,
+.result-container .result-content form ul li::before,
+.note-container .home-content form ul li::before,
+.note-container .result-content form ul li::before {
   content: "•";
   color: #ebbb61;
   font-weight: 700;
@@ -155,12 +191,22 @@ footer .footer-right {
   width: 1em;
   margin: 0 0 0 -1em;
 }
-.home-container .home-content form ul li {
+.home-container .home-content form ul li,
+.home-container .result-content form ul li,
+.result-container .home-content form ul li,
+.result-container .result-content form ul li,
+.note-container .home-content form ul li,
+.note-container .result-content form ul li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.home-container .home-content form ul li label {
+.home-container .home-content form ul li label,
+.home-container .result-content form ul li label,
+.result-container .home-content form ul li label,
+.result-container .result-content form ul li label,
+.note-container .home-content form ul li label,
+.note-container .result-content form ul li label {
   color: grey;
   background-color: #262636;
   font-size: 18px;
@@ -171,7 +217,12 @@ footer .footer-right {
   align-items: center;
   width: 100%;
 }
-.home-container .home-content form ul li label input[type=date] {
+.home-container .home-content form ul li label input[type=date],
+.home-container .result-content form ul li label input[type=date],
+.result-container .home-content form ul li label input[type=date],
+.result-container .result-content form ul li label input[type=date],
+.note-container .home-content form ul li label input[type=date],
+.note-container .result-content form ul li label input[type=date] {
   background-color: #706fc8;
   color: #d3d2d8;
   border: none;
@@ -181,7 +232,12 @@ footer .footer-right {
   font-size: 18px;
   text-align: center;
 }
-.home-container .home-content form input[type=text] {
+.home-container .home-content form input[type=text],
+.home-container .result-content form input[type=text],
+.result-container .home-content form input[type=text],
+.result-container .result-content form input[type=text],
+.note-container .home-content form input[type=text],
+.note-container .result-content form input[type=text] {
   background-color: #262636;
   font-size: 18px;
   border: none;
@@ -190,7 +246,12 @@ footer .footer-right {
   color: #d3d2d8;
   width: 100%;
 }
-.home-container .home-content form textarea {
+.home-container .home-content form textarea,
+.home-container .result-content form textarea,
+.result-container .home-content form textarea,
+.result-container .result-content form textarea,
+.note-container .home-content form textarea,
+.note-container .result-content form textarea {
   width: 100%;
   background-color: #262636;
   border-radius: 5px;
@@ -199,42 +260,87 @@ footer .footer-right {
   color: #d3d2d8;
   padding: 20px;
 }
-.home-container .home-content form textarea:focus {
+.home-container .home-content form textarea:focus,
+.home-container .result-content form textarea:focus,
+.result-container .home-content form textarea:focus,
+.result-container .result-content form textarea:focus,
+.note-container .home-content form textarea:focus,
+.note-container .result-content form textarea:focus {
   outline: 3px solid #20202e;
 }
-.home-container .home-content form .label-checkbox {
+.home-container .home-content form .label-checkbox,
+.home-container .result-content form .label-checkbox,
+.result-container .home-content form .label-checkbox,
+.result-container .result-content form .label-checkbox,
+.note-container .home-content form .label-checkbox,
+.note-container .result-content form .label-checkbox {
   color: #d3d2d8;
   display: flex;
   align-items: center;
   margin: 20px 0 0 0;
 }
-.home-container .home-content form .label-checkbox span {
+.home-container .home-content form .label-checkbox span,
+.home-container .result-content form .label-checkbox span,
+.result-container .home-content form .label-checkbox span,
+.result-container .result-content form .label-checkbox span,
+.note-container .home-content form .label-checkbox span,
+.note-container .result-content form .label-checkbox span {
   font-weight: 700;
   font-size: 24px;
   color: #ebbb61;
   padding: 0 10px 0 0;
   cursor: pointer;
 }
-.home-container .home-content form .label-checkbox input[type=checkbox] {
+.home-container .home-content form .label-checkbox input[type=checkbox],
+.home-container .result-content form .label-checkbox input[type=checkbox],
+.result-container .home-content form .label-checkbox input[type=checkbox],
+.result-container .result-content form .label-checkbox input[type=checkbox],
+.note-container .home-content form .label-checkbox input[type=checkbox],
+.note-container .result-content form .label-checkbox input[type=checkbox] {
   display: none;
 }
-.home-container .home-content form .label-checkbox input[type=checkbox] + span::before {
+.home-container .home-content form .label-checkbox input[type=checkbox] + span::before,
+.home-container .result-content form .label-checkbox input[type=checkbox] + span::before,
+.result-container .home-content form .label-checkbox input[type=checkbox] + span::before,
+.result-container .result-content form .label-checkbox input[type=checkbox] + span::before,
+.note-container .home-content form .label-checkbox input[type=checkbox] + span::before,
+.note-container .result-content form .label-checkbox input[type=checkbox] + span::before {
   content: "☐";
 }
-.home-container .home-content form .label-checkbox input[type=checkbox]:checked + span::before {
+.home-container .home-content form .label-checkbox input[type=checkbox]:checked + span::before,
+.home-container .result-content form .label-checkbox input[type=checkbox]:checked + span::before,
+.result-container .home-content form .label-checkbox input[type=checkbox]:checked + span::before,
+.result-container .result-content form .label-checkbox input[type=checkbox]:checked + span::before,
+.note-container .home-content form .label-checkbox input[type=checkbox]:checked + span::before,
+.note-container .result-content form .label-checkbox input[type=checkbox]:checked + span::before {
   content: "☑";
 }
-.home-container .home-content form .label-hidden {
+.home-container .home-content form .label-hidden,
+.home-container .result-content form .label-hidden,
+.result-container .home-content form .label-hidden,
+.result-container .result-content form .label-hidden,
+.note-container .home-content form .label-hidden,
+.note-container .result-content form .label-hidden {
   display: none;
   flex-direction: column;
   width: 50%;
   max-width: 50%;
 }
-.home-container .home-content form .label-hidden label {
+.home-container .home-content form .label-hidden label,
+.home-container .result-content form .label-hidden label,
+.result-container .home-content form .label-hidden label,
+.result-container .result-content form .label-hidden label,
+.note-container .home-content form .label-hidden label,
+.note-container .result-content form .label-hidden label {
   padding: 15px 0 0 0;
   color: #d3d2d8;
 }
-.home-container .home-content form .label-hidden input {
+.home-container .home-content form .label-hidden input,
+.home-container .result-content form .label-hidden input,
+.result-container .home-content form .label-hidden input,
+.result-container .result-content form .label-hidden input,
+.note-container .home-content form .label-hidden input,
+.note-container .result-content form .label-hidden input {
   border: none;
   border-radius: 5px;
   background-color: #262636;
@@ -243,19 +349,34 @@ footer .footer-right {
   color: #d3d2d8;
   width: 100%;
 }
-.home-container .home-content form .label-hidden span {
+.home-container .home-content form .label-hidden span,
+.home-container .result-content form .label-hidden span,
+.result-container .home-content form .label-hidden span,
+.result-container .result-content form .label-hidden span,
+.note-container .home-content form .label-hidden span,
+.note-container .result-content form .label-hidden span {
   color: #d3d2d8;
   background-color: #706fc8;
   border-radius: 5px;
   padding: 5px 10px;
   margin: 0 0 0 20px;
 }
-.home-container .home-content form .label-hidden-alt label {
+.home-container .home-content form .label-hidden-alt label,
+.home-container .result-content form .label-hidden-alt label,
+.result-container .home-content form .label-hidden-alt label,
+.result-container .result-content form .label-hidden-alt label,
+.note-container .home-content form .label-hidden-alt label,
+.note-container .result-content form .label-hidden-alt label {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.home-container .home-content form input[type=submit] {
+.home-container .home-content form input[type=submit],
+.home-container .result-content form input[type=submit],
+.result-container .home-content form input[type=submit],
+.result-container .result-content form input[type=submit],
+.note-container .home-content form input[type=submit],
+.note-container .result-content form input[type=submit] {
   border: none;
   border-radius: 5px;
   background-color: #706fc8;
@@ -267,11 +388,127 @@ footer .footer-right {
   width: 50%;
   cursor: pointer;
 }
-.home-container .home-content form input[type=submit]:hover {
+.home-container .home-content form input[type=submit]:hover,
+.home-container .result-content form input[type=submit]:hover,
+.result-container .home-content form input[type=submit]:hover,
+.result-container .result-content form input[type=submit]:hover,
+.note-container .home-content form input[type=submit]:hover,
+.note-container .result-content form input[type=submit]:hover {
   background-color: #4241aa;
 }
 
 /* End Home */
+/* Result */
+.result-content,
+.note-content {
+  min-height: 80vh;
+}
+.result-content h1,
+.note-content h1 {
+  color: #ebbb61;
+  font-size: 48px;
+}
+.result-content span,
+.note-content span {
+  background-color: #262636;
+  border-radius: 5px;
+  color: #d3d2d8;
+  padding: 5px 10px;
+  font-size: 24px;
+  margin: 50px 0 0 0;
+}
+.result-content button,
+.note-content button {
+  background-color: #706fc8;
+  color: #d3d2d8;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 5px 10px;
+  margin: 10px 0 50px 0;
+  cursor: pointer;
+}
+.result-content p,
+.note-content p {
+  color: #d3d2d8;
+  font-size: 24px;
+}
+.result-content p a,
+.note-content p a {
+  color: #d3d2d8;
+  text-decoration: none;
+  font-weight: 500;
+}
+.result-content .result-btn,
+.note-content .result-btn {
+  border-radius: 5px;
+  background-color: #706fc8;
+  color: #d3d2d8;
+  padding: 10px 50px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 50px 0 50px 0;
+}
+.result-content .result-btn:hover,
+.note-content .result-btn:hover {
+  background-color: #4241aa;
+}
+
+/* End Result */
+/* Note */
+.note-content {
+  width: 75%;
+  height: 100%;
+  background-color: #3e3a50;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 50px 0;
+}
+.note-content h1 {
+  padding: 50px;
+}
+.note-content h2 {
+  font-size: 48px;
+  color: #ebbb61;
+  padding: 100px 0 0 0;
+}
+.note-content h3 {
+  font-size: 24px;
+  color: #d3d2d8;
+  padding: 20px 0 0 0;
+}
+.note-content p {
+  padding: 0 50px;
+}
+.note-content form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: auto;
+}
+.note-content form input[type=password],
+.note-content form input[type=submit] {
+  background-color: #262636;
+  color: #d3d2d8;
+  border-radius: 5px;
+  border: none;
+  font-size: 24px;
+  padding: 5px 10px;
+}
+.note-content form input[type=submit] {
+  background-color: #706fc8;
+  color: #d3d2d8;
+  margin: 10px 0 0 0;
+  cursor: pointer;
+}
+
+/* End Note */
 /* Privacy Policy */
 .priv-container {
   padding: 0 75px;

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\NoteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +27,9 @@ Route::post('/create', [FormController::class, 'handleForm'])->middleware('verif
 Route::get('/result', function () {
     return view('result');
 });
+
+// Displaying note
+Route::match(['get', 'post'], '/n/{string}', [NoteController::class, 'handleLink'])->middleware('verify.link');
 
 // Privacy Policy
 Route::get('/privacy', function () {

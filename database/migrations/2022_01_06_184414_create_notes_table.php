@@ -19,13 +19,10 @@ class CreateNotesTable extends Migration
             $table->date('expiration_date');
             $table->string('content');
             $table->string('link');
-            $table->boolean('with_password');
             $table->string('password');
-            $table->boolean('with_notification');
             $table->string('notification_email');
-            $table->boolean('notification_send');
             $table->string('notification_reference');
-            $table->boolean('with_views');
+            $table->boolean('views_limit');
             $table->integer('views_count');
         });
     }
