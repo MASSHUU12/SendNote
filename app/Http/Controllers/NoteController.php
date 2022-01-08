@@ -19,7 +19,7 @@ class NoteController extends Controller
         if ($result[0]->password == 'null' || $request->input('note_password') != null) {
             $views = $result[0]->views_count;
 
-            $this->sendNotification($request);
+            $this->sendNotification($result);
 
             if ($views + 1 >= $result[0]->views_limit) DB::delete('delete from notes where id = ?', [$result[0]->id]);
             else DB::update('update notes set views_count = ? where id = ?', [$views + 1, $result[0]->id]);

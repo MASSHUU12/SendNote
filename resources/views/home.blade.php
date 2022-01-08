@@ -78,7 +78,7 @@
                         name="with_notification"
                         id="with_notification" />
                     <span></span></label
-                >Destruction notification
+                >Destruction notification (will be working in the future)
             </div>
             <div class="label-hidden" id="label-notif">
                 <label for="email"
