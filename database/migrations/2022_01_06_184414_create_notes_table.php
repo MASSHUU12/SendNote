@@ -15,9 +15,9 @@ class CreateNotesTable extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->text('title');
             $table->date('expiration_date');
-            $table->string('content');
+            $table->text('content');
             $table->string('link');
             $table->string('password');
             $table->string('notification_email');

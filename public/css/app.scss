@@ -605,6 +605,64 @@ footer {
         }
     }
 
+    .result-container,
+    .note-container {
+        .result-content,
+        .note-content {
+            width: 100%;
+            text-align: center;
+
+            h1 {
+                font-size: $fs-r;
+                padding: 0 $p-m;
+            }
+
+            p,
+            span {
+                font-size: $fs-s;
+                padding: 0 $p-m;
+            }
+
+            span {
+                white-space: nowrap;
+                width: 75%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding: $p-s $p-m;
+            }
+        }
+    }
+
+    .note-container {
+        .note-content {
+            text-align: left;
+
+            h1 {
+                padding: $p-b $p-m 0 $p-m;
+            }
+
+            p {
+                padding: 0 0 $p-b;
+            }
+
+            form {
+                position: static;
+                transform: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: $p-m 0 0 0;
+
+                input[type="password"],
+                input[type="submit"] {
+                    width: 75%;
+                    padding: $p-xs 0 $p-xs $p-s;
+                }
+            }
+        }
+    }
+
     .priv-container {
         padding: 0 $p-m;
     }

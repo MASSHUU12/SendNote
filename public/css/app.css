@@ -657,6 +657,66 @@ footer .footer-right p a {
     width: 100%;
   }
 
+  .result-container .result-content,
+.result-container .note-content,
+.note-container .result-content,
+.note-container .note-content {
+    width: 100%;
+    text-align: center;
+  }
+  .result-container .result-content h1,
+.result-container .note-content h1,
+.note-container .result-content h1,
+.note-container .note-content h1 {
+    font-size: 24px;
+    padding: 0 20px;
+  }
+  .result-container .result-content p,
+.result-container .result-content span,
+.result-container .note-content p,
+.result-container .note-content span,
+.note-container .result-content p,
+.note-container .result-content span,
+.note-container .note-content p,
+.note-container .note-content span {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+  .result-container .result-content span,
+.result-container .note-content span,
+.note-container .result-content span,
+.note-container .note-content span {
+    white-space: nowrap;
+    width: 75%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 20px;
+  }
+
+  .note-container .note-content {
+    text-align: left;
+  }
+  .note-container .note-content h1 {
+    padding: 50px 20px 0 20px;
+  }
+  .note-container .note-content p {
+    padding: 0 0 50px;
+  }
+  .note-container .note-content form {
+    position: static;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 0 0;
+  }
+  .note-container .note-content form input[type=password],
+.note-container .note-content form input[type=submit] {
+    width: 75%;
+    padding: 5px 0 5px 10px;
+  }
+
   .priv-container {
     padding: 0 20px;
   }
