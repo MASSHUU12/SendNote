@@ -2,7 +2,7 @@
 {{ __("Privacy Policy") }}
 @endsection @section('content')
 <div class="priv-container">
-    <h1>Privacy Policy</h1>
+    <h1>{{ __("Privacy Policy") }}</h1>
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
         quibusdam explicabo, eum necessitatibus dolore officiis nemo commodi

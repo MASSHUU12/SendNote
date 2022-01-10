@@ -15,6 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route for locale change
+Route::get('language/{locale}', function ($locale) {
+    app()->setLocale($locale);
+    session()->put('locale', $locale);
+
+    return redirect()->back();
+});
+
+
 // Home
 Route::get('/', function () {
     return view('home');

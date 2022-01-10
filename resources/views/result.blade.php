@@ -4,15 +4,19 @@
 <div class="result-container">
     <div class="result-content">
         @if (session("status") == "successful")
-        <h1>Send the link to whom you want to view</h1>
+        <h1>{{ __("Send the link to the person you want them to see it") }}</h1>
         <span>{{ session("link") }}</span>
-        <button>Copy link to clipboard</button>
+        <button>{{ __("Copy link to clipboard") }}</button>
         @else
-        <h1>There is nothing to see here right now</h1>
-        <p>First, go to the home page and create a note there.</p>
-        <a href="/" class="result-btn">Return Home</a>
+        <h1>{{ __("There is nothing to see here right now") }}</h1>
+        <p>{{ __("First, go to the home page and create a note there.") }}</p>
+        <a href="/" class="result-btn">{{ __("Return Home") }}</a>
         @endif
-        <p>If you &#9825; my site you can support me <a href="#">here</a>.</p>
+        <p>
+            {{ __("If you") }} &#9825; {{ __("my site you can support me") }}
+            <a href="#">{{ __("here") }}</a
+            >.
+        </p>
     </div>
 </div>
 @endsection

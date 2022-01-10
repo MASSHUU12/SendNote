@@ -23,14 +23,16 @@
         <footer>
             <div class="footer-left">
                 <a href="/">Home</a>
-                <a href="/privacy">Privacy Policy</a>
-                <h1>Other services</h1>
-                <a href="#">Cut.It - URL Shortener</a>
+                <a href="/privacy">{{ __("Privacy Policy") }}</a>
+                <h1>{{ __("Other services") }}</h1>
+                <a href="#">Cut.It - {{ __("URL Shortener") }}</a>
             </div>
             <div class="footer-right">
                 <p>
-                    This if free online service - made with &#9825; you can
-                    support website <a href="">here</a>.
+                    {{ __("This if free online service - made with") }} &#9825;.
+                    {{ __("You can support website") }}
+                    <a href="">{{ __("here") }}</a
+                    >.
                 </p>
             </div>
         </footer>
