@@ -377,6 +377,29 @@ footer {
         background-color: $color-sixth-dark;
     }
 }
+
+.deletion-container {
+    height: 100%;
+
+    h2 {
+        color: $color-fourth;
+        font-size: $fs-m;
+    }
+
+    h3 {
+        color: $color-third;
+        font-weight: $fw-xs;
+    }
+
+    #deletion-form {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: $p-s 0 $p-xb;
+    }
+}
 /* End Result */
 
 /* Note */

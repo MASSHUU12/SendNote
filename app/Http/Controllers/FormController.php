@@ -43,7 +43,7 @@ class FormController extends Controller
         $encrypted_note_content = $this->encryptStr($note_content, $link, false);
 
         // send to database
-        //DB::insert('insert into notes (title, expiration_date, content, link, password, notification_email, notification_reference, views_limit, views_count) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', [$title, $expiration_date, $encrypted_note_content, $link, $password, $email, $email_ref, $views, 0]);
+        DB::insert('insert into notes (title, expiration_date, content, link, password, notification_email, notification_reference, views_limit, views_count) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', [$title, $expiration_date, $encrypted_note_content, $link, $password, $email, $email_ref, $views, 0]);
 
         return redirect('/result')->with('status', 'successful')->with('link', $_SERVER['HTTP_HOST'] . '/n' . '/' . $link);
     }

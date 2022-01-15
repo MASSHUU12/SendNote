@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\NoteController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\QuickRemovalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,9 @@ Route::post('/create', [FormController::class, 'handleForm'])->middleware('verif
 Route::get('/result', function () {
     return view('result');
 });
+
+// Quick deletion
+Route::delete('/delete', [QuickRemovalController::class, 'checkIfRemovalAttempt']);
 
 // Displaying note
 Route::match(['get', 'post'], '/n/{string}', [NoteController::class, 'handleLink'])->middleware('verify.link');
