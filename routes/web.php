@@ -39,7 +39,7 @@ Route::get('/result', function () {
 });
 
 // Quick deletion
-Route::delete('/delete', [QuickRemovalController::class, 'checkIfRemovalAttempt']);
+Route::match(['get', 'delete'], '/delete', [QuickRemovalController::class, 'checkIfRemovalAttempt']);
 
 // Displaying note
 Route::match(['get', 'post'], '/n/{string}', [NoteController::class, 'handleLink'])->middleware('verify.link');

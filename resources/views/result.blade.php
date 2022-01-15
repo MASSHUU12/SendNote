@@ -8,9 +8,9 @@
         <span id="text_copy">{{ session("link") }}</span>
         <button id="btn_copy">{{ __("Copy link to clipboard") }}</button>
         <div class="deletion-container">
-            <h2>If necessary, you can delete the created note right away.</h4>
+            <h2>{{__('If necessary, you can delete the created note right away.')}}</h4>
             <h3>
-                This option will no longer be available when you leave this page.
+                {{__('This option will no longer be available when you leave this page.')}}
             </h3>
             <form action="/delete" method="post" id="deletion-form">
                 @method('DELETE')
@@ -20,8 +20,8 @@
             </form>
         </div>
         @elseif (session("status") == "deleted_successfully")
-        <h1>Deleted successfully</h1>
-        <p>Your note has been deleted successfully, go to the home page to create a new one.</p>
+        <h1>{{__('Deleted successfully')}}</h1>
+        <p>{{__('Your note has been deleted successfully, go to the home page to create a new one.')}}</p>
         <a href="/" class="result-btn">{{ __("Return Home") }}</a>
         @else
         <h1>{{ __("There is nothing to see here right now") }}</h1>

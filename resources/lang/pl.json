@@ -46,5 +46,12 @@
     "Email is missing": "Brakuje adresu email",
     "Invalid email format": "Nieprawidłowy format adresu email",
     "The number of views is missing": "Brakuje liczby wyświetleń",
-    "The number of views must not be less than 1 and higher than 100": "Liczba wyświetleń nie może być mniejsza niż 1 i większa niż 100"
+    "The number of views must not be less than 1 and higher than 100": "Liczba wyświetleń nie może być mniejsza niż 1 i większa niż 100",
+    "If necessary, you can delete the created note right away.": "Jeśli to konieczne, możesz od razu usunąć stworzoną notatkę.",
+    "This option will no longer be available when you leave this page.": "Ta opcja przestanie być dostępna w momencie, gdy opuścisz tą stronę.",
+    "DELETE": "USUŃ",
+    "Deleted successfully": "Usunięto pomyślnie",
+    "Your note has been deleted successfully, go to the home page to create a new one.": "Twoja notatka została usunięta pomyślnie, przejdź do strony głównej, aby stworzyć nową.",
+    "Looks like you're lost.": "Wygląda na to, że się zgubiłeś.",
+    "Well, this is awkward. Maybe this page used to exist, or you just spelled something wrong.": "Cóż, to jest niezręczne. Może ta strona kiedyś istniała, albo po prostu coś źle wprowadziłeś."
 }
