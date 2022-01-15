@@ -220,6 +220,7 @@ footer {
                 font-size: $fs-s;
                 color: $color-third;
                 padding: $p-m;
+                resize: vertical;
             }
 
             textarea:focus {

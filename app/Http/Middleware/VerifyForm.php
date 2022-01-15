@@ -39,9 +39,23 @@ class VerifyForm
         $views = $request->input('views');
 
         /* logic for main */
+
+        // title
         if ($title == null) array_push($err_container, ['missing_t' => 'Title is missing']);
-        if ($expiration_date == null) array_push($err_container, ['missing_ed' => 'Expiration date is missing']);
+        elseif (strlen($title) > 255) array_push($err_container, ['len_t' => 'Title exceeds 255 characters limit']);
+
+        // note content
         if ($note_content == null) array_push($err_container, ['missing_n' => 'Note is missing']);
+        elseif (strlen($note_content) > 4096) array_push($err_container, ['len_c' => 'Content exceeds 4096 characters limit']);
+
+        // date
+        $date_now = strtotime(date("Y-m-d"));
+        $date_exp = strtotime($expiration_date);
+        $date_30 = strtotime('+30 day');
+
+        if ($expiration_date == null) array_push($err_container, ['missing_ed' => 'Expiration date is missing']);
+        elseif ($date_exp < $date_now || $date_exp > $date_30)
+            array_push($err_container, ['date_err' => 'Note expiration date cannot be a past or future date greater than 30 days']);
 
         /* logic for optional */
 
@@ -56,7 +70,7 @@ class VerifyForm
 
         // views
         if ($with_views != null && $views == null) array_push($err_container, ['missing_nv' => 'The number of views is missing']);
-        else if ($with_views != null && $views <= 0) array_push($err_container, ['small_nv' => 'The number of views must not be less than 1']);
+        else if ($with_views != null && $views <= 0 || $views > 100) array_push($err_container, ['small_nv' => 'The number of views must not be less than 1 and higher than 100']);
 
         if (sizeof($err_container) >= 2) return back()->withErrors($err_container)->withInput();
         else return $next($request);

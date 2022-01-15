@@ -30,6 +30,7 @@
                         id="title"
                         placeholder="{{ __('Note title') }}..."
                         value="{{ old('title') }}"
+                        max="255"
                     />
                 </li>
                 <li>
@@ -50,7 +51,7 @@
                 cols="30"
                 rows="10"
                 placeholder="{{ __('Write a note') }}..."
-                maxlength="1024"
+                maxlength="4096"
                 >{{ old("note_content") }}</textarea
             >
 
@@ -125,6 +126,7 @@
                         name="views"
                         id="views"
                         value="{{ old('views') }}"
+                        max="100"
                     /><span>{{ __("view/s") }}</span></label
                 >
             </div>
