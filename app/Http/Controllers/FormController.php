@@ -13,7 +13,7 @@ class FormController extends Controller
         $title = $request->input('title');
         $expiration_date = $request->input('expiration_date');
         $note_content = $request->input('note_content');
-        $link = md5($title);
+        $link = $this->encryptStr($title, $title, true);
 
         /* optional */
 
@@ -40,14 +40,20 @@ class FormController extends Controller
         if ($with_views == null) $views = 0;
         else $views = $request->input('views');
 
-        // encrypt note
-        $iv_length = openssl_cipher_iv_length('aes128');
-        $iv = openssl_random_pseudo_bytes($iv_length);
-        $encrypted_note_content = openssl_encrypt($note_content, 'aes128', $link, 0, $iv);
+        $encrypted_note_content = $this->encryptStr($note_content, $link, false);
 
         // send to database
-        DB::insert('insert into notes (title, expiration_date, content, link, password, notification_email, notification_reference, views_limit, views_count) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', [$title, $expiration_date, bin2hex($iv) . $encrypted_note_content, $link, $password, $email, $email_ref, $views, 0]);
+        DB::insert('insert into notes (title, expiration_date, content, link, password, notification_email, notification_reference, views_limit, views_count) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', [$title, $expiration_date, $encrypted_note_content, $link, $password, $email, $email_ref, $views, 0]);
 
         return redirect('/result')->with('status', 'successful')->with('link', $_SERVER['HTTP_HOST'] . '/n' . '/' . $link);
+    }
+
+    function encryptStr($str, $key, $isLink)
+    {
+        $iv_length = openssl_cipher_iv_length('aes128');
+        $iv = openssl_random_pseudo_bytes($iv_length);
+
+        if ($isLink) return md5(openssl_encrypt($str, 'aes128', $key, 0, $iv));
+        return bin2hex($iv) . openssl_encrypt($str, 'aes128', $key, 0, $iv);
     }
 }
