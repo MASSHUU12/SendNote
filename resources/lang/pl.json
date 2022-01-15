@@ -32,5 +32,19 @@
     "First, go to the home page and create a note there.": "Najpierw przejdź na stronę główną i stwórz tam notatkę.",
     "Return Home": "Powrót na stronę główną",
     "If you": "Jeśli",
-    "my site you can support me": "moją stronę możesz wesprzeć mnie"
+    "my site you can support me": "moją stronę możesz wesprzeć mnie",
+    "There was an problem, info below:": "Wystąpił problem, informacje poniżej:",
+    "Title is missing": "Brakuje tytułu",
+    "Title exceeds 255 characters limit": "Tytuł przekroczył limit 255 znaków",
+    "Note is missing": "Brakuje notatki",
+    "Content exceeds 4096 characters limit": "Treść przekroczyła limit 4096 znaków",
+    "Expiration date is missing": "Brakuje daty wygaśnięcia",
+    "Note expiration date cannot be a past or future date greater than 30 days": "Data wygaśnięcia notatki nie może być przeszłą datą lub przyszłą większą niż 30 dni",
+    "Password is missing": "Brakuje hasła",
+    "Repeat password": "Powtórz hasło",
+    "Passwords does not match": "Hasła się nie zgadzają",
+    "Email is missing": "Brakuje adresu email",
+    "Invalid email format": "Nieprawidłowy format adresu email",
+    "The number of views is missing": "Brakuje liczby wyświetleń",
+    "The number of views must not be less than 1 and higher than 100": "Liczba wyświetleń nie może być mniejsza niż 1 i większa niż 100"
 }

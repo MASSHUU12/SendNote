@@ -61,18 +61,17 @@ footer {
     .footer-left,
     .footer-right {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 30%;
         padding: $p-r 0;
 
-        h1 {
-            color: $color-third;
-            font-weight: $fw-b;
-            padding: $p-r 0 0 0;
+        span {
+            font-weight: $fw-m;
         }
 
         a,
-        p {
+        p,
+        span {
             color: $color-third;
             text-decoration: none;
             font-size: $fs-r;
@@ -81,6 +80,16 @@ footer {
                 color: $color-fourth;
             }
         }
+    }
+
+    .footer-left {
+        justify-content: space-evenly;
+    }
+
+    .footer-left-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     .footer-right {

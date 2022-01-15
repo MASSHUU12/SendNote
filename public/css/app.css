@@ -54,29 +54,39 @@ footer {
 footer .footer-left,
 footer .footer-right {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 30%;
   padding: 15px 0;
 }
-footer .footer-left h1,
-footer .footer-right h1 {
-  color: #d3d2d8;
-  font-weight: 700;
-  padding: 15px 0 0 0;
+footer .footer-left span,
+footer .footer-right span {
+  font-weight: 500;
 }
 footer .footer-left a,
 footer .footer-left p,
+footer .footer-left span,
 footer .footer-right a,
-footer .footer-right p {
+footer .footer-right p,
+footer .footer-right span {
   color: #d3d2d8;
   text-decoration: none;
   font-size: 24px;
 }
 footer .footer-left a a,
 footer .footer-left p a,
+footer .footer-left span a,
 footer .footer-right a a,
-footer .footer-right p a {
+footer .footer-right p a,
+footer .footer-right span a {
   color: #ebbb61;
+}
+footer .footer-left {
+  justify-content: space-evenly;
+}
+footer .footer-left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 footer .footer-right {
   width: 50%;

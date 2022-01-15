@@ -22,10 +22,33 @@
 
         <footer>
             <div class="footer-left">
-                <a href="/">Home</a>
-                <a href="/privacy">{{ __("Privacy Policy") }}</a>
-                <h1>{{ __("Other services") }}</h1>
-                <a href="#">Cut.It - {{ __("URL Shortener") }}</a>
+                <div class="footer-left-content">
+                    <a href="/">Home</a>
+                    <a href="/privacy">{{ __("Privacy Policy") }}</a>
+                    <div class="footer-lang">
+                        <a href="/language/pl" rel="nofollow">
+                            <span
+                                class="iconify"
+                                data-icon="twemoji:flag-for-flag-poland"
+                                data-width="38"
+                            ></span>
+                        </a>
+                        <a href="/language/en" rel="nofollow">
+                            <span
+                                class="iconify"
+                                data-icon="twemoji:flag-for-flag-united-states"
+                                data-width="38"
+                            ></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-left-content">
+                    <span>{{ __("Other services") }}</span>
+                    <a href="#">Cut.It - {{ __("URL Shortener") }}</a>
+                    <a href="https://jakubdev.vxm.pl" target="_blank"
+                        >KolobrzegHotele</a
+                    >
+                </div>
             </div>
             <div class="footer-right">
                 <p>
