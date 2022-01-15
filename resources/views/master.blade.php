@@ -71,6 +71,7 @@
             crossorigin="anonymous"
         ></script>
 
+        <script src="{{ asset('js/detectLocale.js') }}"></script>
         @yield('scripts')
     </body>
 </html>

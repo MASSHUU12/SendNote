@@ -5,8 +5,8 @@
     <div class="result-content">
         @if (session("status") == "successful")
         <h1>{{ __("Send the link to the person you want them to see it") }}</h1>
-        <span>{{ session("link") }}</span>
-        <button>{{ __("Copy link to clipboard") }}</button>
+        <span id="text_copy">{{ session("link") }}</span>
+        <button id="btn_copy">{{ __("Copy link to clipboard") }}</button>
         @else
         <h1>{{ __("There is nothing to see here right now") }}</h1>
         <p>{{ __("First, go to the home page and create a note there.") }}</p>
@@ -19,4 +19,6 @@
         </p>
     </div>
 </div>
+@endsection @section('scripts')
+<script src="{{ asset('js/copyText.js') }}"></script>
 @endsection
