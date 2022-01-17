@@ -11,10 +11,7 @@ class NoteController extends Controller
     {
         $link = $request->string;
         $result = DB::select('select * from notes where link = ?', [$link]);
-
-        // decrypt message
-        $s = str_split($result[0]->content, 32);
-        $decrypted_note = openssl_decrypt($s[1], 'aes128', $link, 0, hex2bin($s[0]));
+        $decrypted_note = $this->decryptNote($result[0]->content, $link);
 
         if ($result[0]->password == 'null' || $request->input('note_password') != null) {
             $views = $result[0]->views_count;
@@ -31,6 +28,20 @@ class NoteController extends Controller
             if (md5($request->input('note_password')) == $result[0]->password) return view('n')->with('status', 'good')->with('title', $result[0]->title)->with('content', $decrypted_note);
             else return view('n')->with('status', 'wrong_password')->with('link', $link);
         else return view('n')->with('status', 'secured')->with('link', $link);
+    }
+
+    function decryptNote($content, $key)
+    {
+        $arr = explode(";", $content);
+        $iv = hex2bin($arr[0]);
+        $encrypted = [];
+
+        array_shift($arr);
+
+        foreach ($arr as $s) {
+            array_push($encrypted, openssl_decrypt($s, 'aes256', $key, 0, $iv));
+        }
+        return implode($encrypted);
     }
 
     function sendNotification($db_result)

@@ -50,10 +50,18 @@ class FormController extends Controller
 
     function encryptStr($str, $key, $isLink)
     {
-        $iv_length = openssl_cipher_iv_length('aes128');
+        $e = chunk_split($str, 15, "/");
+        $s = explode("/", $e);
+
+        $iv_length = openssl_cipher_iv_length('aes256');
         $iv = openssl_random_pseudo_bytes($iv_length);
 
-        if ($isLink) return md5(openssl_encrypt($str, 'aes128', $key, 0, $iv));
-        return bin2hex($iv) . openssl_encrypt($str, 'aes128', $key, 0, $iv);
+        $encrypted = [bin2hex($iv)];
+
+        foreach ($s as $v) {
+            if ($isLink) return md5(openssl_encrypt($str, 'aes256', $key, 0, $iv));
+            else array_push($encrypted, openssl_encrypt($v, 'aes256', $key, 0, $iv));
+        }
+        return implode(";", $encrypted);
     }
 }
