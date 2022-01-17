@@ -16,20 +16,31 @@ class NoteController extends Controller
         if ($result[0]->password == 'null' || $request->input('note_password') != null) {
             $views = $result[0]->views_count;
 
-            $this->sendNotification($result);
+            $this->sendNotification($result); //!
 
+            /*
+            |* If the number of times a note has been viewed has reached the limit,
+            |* the note will be deleted from the database,
+            |* otherwise the number of times it has been viewed will be updated
+            */
             if ($views + 1 >= $result[0]->views_limit) DB::delete('delete from notes where id = ?', [$result[0]->id]);
             else DB::update('update notes set views_count = ? where id = ?', [$views + 1, $result[0]->id]);
         }
 
-        if ($result[0]->password == 'null')
+        if ($result[0]->password == 'null') // If the note is not password-protected, the page immediately displays its contents
             return view('n')->with('status', 'good')->with('title', $result[0]->title)->with('content', $decrypted_note);
         else if ($request->input('note_password') != null)
+            /*
+            |* If the note is password protected and the user has entered the correct password,
+            |* the page will display the contents of the note,
+            |* otherwise it will display an error and ask for the password again
+            */
             if (md5($request->input('note_password')) == $result[0]->password) return view('n')->with('status', 'good')->with('title', $result[0]->title)->with('content', $decrypted_note);
             else return view('n')->with('status', 'wrong_password')->with('link', $link);
-        else return view('n')->with('status', 'secured')->with('link', $link);
+        else return view('n')->with('status', 'secured')->with('link', $link); // If the note is password protected the user will be prompted to enter the password
     }
 
+    // A function that decrypts a message divided into parts
     function decryptNote($content, $key)
     {
         $arr = explode(";", $content);
