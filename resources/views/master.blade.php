@@ -23,27 +23,13 @@
         <footer>
             <div class="footer-left">
                 <div class="footer-left-content">
+                    <h3>{{ __("Main") }}</h3>
                     <a href="/">Home</a>
                     <a href="/privacy">{{ __("Privacy Policy") }}</a>
-                    <div class="footer-lang">
-                        <a href="/language/pl" rel="nofollow">
-                            <span
-                                class="iconify"
-                                data-icon="twemoji:flag-for-flag-poland"
-                                data-width="38"
-                            ></span>
-                        </a>
-                        <a href="/language/en" rel="nofollow">
-                            <span
-                                class="iconify"
-                                data-icon="twemoji:flag-for-flag-united-states"
-                                data-width="38"
-                            ></span>
-                        </a>
-                    </div>
+                    <a href="/cookie">{{ __("Cookie Policy") }}</a>
                 </div>
                 <div class="footer-left-content">
-                    <span>{{ __("Other services") }}</span>
+                    <h3>{{ __("Other services") }}</h3>
                     <a href="#">Cut.It - {{ __("URL Shortener") }}</a>
                     <a href="https://jakubdev.vxm.pl" target="_blank"
                         >KolobrzegHotele</a
@@ -57,6 +43,22 @@
                     <a href="">{{ __("here") }}</a
                     >.
                 </p>
+                <div class="footer-lang">
+                    <a href="/language/pl" rel="nofollow">
+                        <span
+                            class="iconify"
+                            data-icon="twemoji:flag-for-flag-poland"
+                            data-width="38"
+                        ></span>
+                    </a>
+                    <a href="/language/en" rel="nofollow">
+                        <span
+                            class="iconify"
+                            data-icon="twemoji:flag-for-flag-united-states"
+                            data-width="38"
+                        ></span>
+                    </a>
+                </div>
             </div>
         </footer>
 

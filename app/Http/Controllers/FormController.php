@@ -56,10 +56,8 @@ class FormController extends Controller
     */
     function encryptStr($str, $key, $isLink)
     {
-        if (!$isLink) {
-            $e = chunk_split($str, 15, "/");
-            $s = explode("/", $e);
-        }
+        $e = chunk_split($str, 15, "/");
+        $s = explode("/", $e);
 
         $iv_length = openssl_cipher_iv_length('aes256');
         $iv = openssl_random_pseudo_bytes($iv_length);

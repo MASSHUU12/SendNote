@@ -53,47 +53,61 @@ header {
 /* Footer */
 footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: $color-second;
     margin: $p-mb 0 0 0;
 
+    h3,
+    a,
+    p {
+        color: $color-third;
+        text-decoration: none;
+        font-size: $fs-s;
+        padding: 0 0 $p-xs;
+    }
+
+    h3 {
+        font-size: $fs-r;
+        font-weight: $fw-m;
+        padding: 0 0 $p-s;
+    }
+
     .footer-left,
     .footer-right {
+        width: 50%;
+        margin: $p-b 0;
+    }
+
+    .footer-left {
         display: flex;
         flex-direction: row;
-        width: 30%;
-        padding: $p-r 0;
+        justify-content: space-around;
 
-        span {
-            font-weight: $fw-m;
+        .footer-left-content {
+            display: flex;
+            flex-direction: column;
         }
+    }
 
-        a,
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+
         p,
-        span {
-            color: $color-third;
-            text-decoration: none;
+        a {
             font-size: $fs-r;
+            font-weight: $fw-m;
+            padding: 0 0 $p-s;
 
             a {
                 color: $color-fourth;
             }
         }
-    }
 
-    .footer-left {
-        justify-content: space-evenly;
-    }
-
-    .footer-left-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .footer-right {
-        width: 50%;
+        .footer-lang {
+            svg {
+                padding: 0 $p-m 0 0;
+            }
+        }
     }
 }
 /* End Footer */
@@ -541,26 +555,30 @@ footer {
     }
 
     footer {
-        margin: $p-m 0 0 0;
-        padding: 0 $p-m;
-        align-items: flex-start;
+        padding: 0 $p-b;
         flex-direction: column;
+        justify-content: flex-start;
 
         .footer-left,
         .footer-right {
-            width: fit-content;
-            padding: $p-s 0;
+            width: 100%;
+        }
 
-            a {
-                font-size: $fs-r;
+        .footer-left {
+            flex-direction: column;
+            margin: $p-b 0;
+
+            .footer-left-content:first-child {
+                padding: 0 0 $p-b;
             }
+        }
 
-            p {
+        .footer-right {
+            margin: 0 0 $p-b;
+
+            p,
+            a {
                 font-size: $fs-s;
-
-                a {
-                    font-size: $fs-s;
-                }
             }
         }
     }
@@ -644,8 +662,10 @@ footer {
         .note-content {
             width: 100%;
             text-align: center;
+            padding: $p-m 0;
 
-            h1 {
+            h1,
+            h2 {
                 font-size: $fs-r;
                 padding: 0 $p-m;
             }

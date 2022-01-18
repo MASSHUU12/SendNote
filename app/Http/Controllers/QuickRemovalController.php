@@ -12,7 +12,7 @@ class QuickRemovalController extends Controller
         $s = $request->input('submit');
         $link = explode("/", $request->input('deletion_link'));
 
-        if ($s == 'DELETE') {
+        if ($s == 'DELETE' || $s == 'USUŃ') {
             $d = DB::delete('delete from notes where link = ?', [$link[2]]);
 
             if ($d == 1) return redirect('/result')->with('status', 'deleted_successfully');
