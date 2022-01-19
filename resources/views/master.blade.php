@@ -62,6 +62,24 @@
             </div>
         </footer>
 
+        <div class="c-container" id="c-container">
+            <div class="c-top">
+                <span
+                    class="iconify"
+                    data-icon="ci:cookie"
+                    data-width="64"
+                ></span>
+                <p>
+                    {{ __("We use") }}
+                    <a href="/cookie">{{ __("cookies") }}</a>
+                    {{ __("to make your experience better") }}
+                </p>
+            </div>
+            <div class="c-btm">
+                <button id="c-btn">OK</button>
+            </div>
+        </div>
+
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
             integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
@@ -74,6 +92,7 @@
         ></script>
 
         <script src="{{ asset('js/detectLocale.js') }}"></script>
+        <script src="{{ asset('js/cConsent.js') }}"></script>
         @yield('scripts')
     </body>
 </html>
