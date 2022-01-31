@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Models\Note;
 
 class QuickRemovalController extends Controller
 {
@@ -13,7 +13,7 @@ class QuickRemovalController extends Controller
         $link = explode("/", $request->input('deletion_link'));
 
         if ($s == 'DELETE' || $s == 'USUŃ') {
-            $d = DB::delete('delete from notes where link = ?', [$link[2]]);
+            $d = Note::where('link', $link[2])->delete();
 
             if ($d == 1) return redirect('/result')->with('status', 'deleted_successfully');
         } else abort(404);

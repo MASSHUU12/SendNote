@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Models\Note;
 
 class VerifyLink
 {
@@ -21,7 +21,7 @@ class VerifyLink
 
         if (strlen($link) < 32 || strlen($link) > 32) return abort(404);
         else {
-            $result = DB::select('select id from notes where link = ?', [$link]);
+            $result = Note::where('link', $link);
 
             if (sizeof($result) <= 0) abort(404);
             else return $next($request);

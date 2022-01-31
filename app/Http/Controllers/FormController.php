@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Models\Note;
 
 class FormController extends Controller
 {
@@ -43,7 +43,17 @@ class FormController extends Controller
         $encrypted_note_content = $this->encryptStr($note_content, $link, false);
 
         // send to database
-        DB::insert('insert into notes (title, expiration_date, content, link, password, notification_email, notification_reference, views_limit, views_count) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', [$title, $expiration_date, $encrypted_note_content, $link, $password, $email, $email_ref, $views, 0]);
+        Note::create([
+            'title' => $title,
+            'expiration_date' => $expiration_date,
+            'content' => $encrypted_note_content,
+            'link' => $link,
+            'password' => $password,
+            'notification_email' => $email,
+            'notification_reference' => $email_ref,
+            'views_limit' => $views,
+            'views_count' => 0
+        ]);
 
         return redirect('/result')->with('status', 'successful')->with('link', $_SERVER['HTTP_HOST'] . '/n' . '/' . $link);
     }

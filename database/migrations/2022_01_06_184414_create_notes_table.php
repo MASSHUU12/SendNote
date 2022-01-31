@@ -20,9 +20,9 @@ class CreateNotesTable extends Migration
             $table->text('content');
             $table->string('link');
             $table->string('password');
-            $table->string('notification_email');
-            $table->string('notification_reference');
-            $table->boolean('views_limit');
+            $table->string('notification_email')->nullable();
+            $table->string('notification_reference')->nullable();
+            $table->boolean('views_limit')->nullable();
             $table->integer('views_count');
         });
     }
