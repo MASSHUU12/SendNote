@@ -536,11 +536,24 @@ footer {
         padding: 0 0 $p-r;
     }
 
-    p {
+    h2,
+    h3,
+    p,
+    li {
         color: $color-third;
         font-size: $fs-s;
-        font-weight: $fw-xs;
+        font-weight: $fw-s;
         padding: $p-r 0 0 0;
+    }
+
+    h2,
+    h3 {
+        font-weight: $fw-m;
+        font-size: $fs-m;
+    }
+
+    h3 {
+        font-size: $fs-r;
     }
 }
 /* End Privacy Policy */

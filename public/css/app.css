@@ -592,11 +592,22 @@ footer .footer-right .footer-lang svg {
   font-size: 48px;
   padding: 0 0 15px;
 }
-.priv-container p {
+.priv-container h2,
+.priv-container h3,
+.priv-container p,
+.priv-container li {
   color: #d3d2d8;
   font-size: 18px;
-  font-weight: 200;
+  font-weight: 300;
   padding: 15px 0 0 0;
+}
+.priv-container h2,
+.priv-container h3 {
+  font-weight: 500;
+  font-size: 36px;
+}
+.priv-container h3 {
+  font-size: 24px;
 }
 
 /* End Privacy Policy */

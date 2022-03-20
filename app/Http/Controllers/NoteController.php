@@ -30,7 +30,7 @@ class NoteController extends Controller
         else return view('n')->with(['status' => 'secured', 'link' => $link]); // If the note is password protected the user will be prompted to enter the password
     }
 
-    // A function that decrypts a message divided into parts
+    // A method that decrypts a message divided into parts
     function decryptNote($content, $key)
     {
         $arr = explode(";", $content);

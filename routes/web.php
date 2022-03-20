@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\QuickRemovalController;
 
@@ -17,12 +18,7 @@ use App\Http\Controllers\QuickRemovalController;
 */
 
 // Route for locale change
-Route::get('language/{locale}', function ($locale) {
-    app()->setLocale($locale);
-    session()->put('locale', $locale);
-
-    return redirect()->back();
-});
+Route::get('language/{locale}', [LocalizationController::class, 'main']);
 
 
 // Home
@@ -47,4 +43,9 @@ Route::match(['get', 'post'], '/n/{string}', [NoteController::class, 'handleLink
 // Privacy Policy
 Route::get('/privacy', function () {
     return view('privacy');
+});
+
+// Cookie Policy
+Route::get('/cookie', function () {
+    return view('cookie');
 });
