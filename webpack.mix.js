@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -11,7 +11,12 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix.js("resources/js/app.js", "public/js")
+    .js("resources/js/cConsent.js", "public/js")
+    .js("resources/js/copyText.js", "public/js")
+    .js("resources/js/detectLocale.js", "public/js")
+    .js("resources/js/inputValidation.js", "public/js")
+    .js("resources/js/showOptions.js", "public/js")
+    .sass("resources/css/app.scss", "public/css")
+    .version()
+    .disableNotifications();

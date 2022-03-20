@@ -54,8 +54,7 @@ class FormController extends Controller
             'views_limit' => $views,
             'views_count' => 0
         ]);
-
-        return redirect('/result')->with('status', 'successful')->with('link', $_SERVER['HTTP_HOST'] . '/n' . '/' . $link);
+        return redirect('/result')->with(['status' => 'successful', 'link' => $_SERVER['HTTP_HOST'] . '/n' . '/' . $link]);
     }
 
     /*

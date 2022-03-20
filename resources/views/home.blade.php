@@ -84,7 +84,8 @@
                     <input
                         type="checkbox"
                         name="with_notification"
-                        id="with_notification" />
+                        id="with_notification"
+                        disabled />
                     <span></span></label
                 >{{
                     __(

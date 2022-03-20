@@ -21,10 +21,10 @@ class VerifyLink
 
         if (strlen($link) < 32 || strlen($link) > 32) return abort(404);
         else {
-            $result = Note::where('link', $link);
+            $result = Note::where('link', $link)->first();
 
-            if (sizeof($result) <= 0) abort(404);
-            else return $next($request);
+            if ($result) return $next($request);
+            else abort(404);
         }
     }
 }
